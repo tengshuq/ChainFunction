@@ -35,27 +35,16 @@
     .font([UIFont systemFontOfSize:13])
     .text(@"链式作死")
     .textColor([UIColor greenColor])
-    .viewMaker()
+    .viewMaker()    // 调到view链
     .frame(CGRectMake(20, 100, 100, 40))
     .backgroundColor([UIColor whiteColor])
     .addToSuperView(self.view)
-    .labelMaker()
+    .labelMaker()   // 回到Label链
     .textAlignment(NSTextAlignmentCenter)
-    .layerMaker()
+    .layerMaker()   // 调到layer链
     .cornerRadius(5)
     .borderColor([UIColor redColor].CGColor)
     .borderWidth(1.f);
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.buttonChain
-    .title(@"我只是个按钮啊",UIControlStateNormal)
-    .titleColor([UIColor redColor],UIControlStateNormal)
-    .titleFont([UIFont systemFontOfSize:13])
-    .controlMaker()
-    .addTarget(self,@selector(clickButton:),UIControlEventTouchUpInside)
-    .viewMaker()
-    .frame(CGRectMake(20, 150, 100, 40))
-    .addToSuperView(self.view);
     
     UITextField *tf = [[UITextField alloc] init];
     tf.viewChain
@@ -70,6 +59,17 @@
     .layerMaker()
     .borderColor([UIColor greenColor].CGColor)
     .borderWidth(1.f);
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.buttonChain
+    .title(@"我还小啊",UIControlStateNormal)
+    .titleFont([UIFont systemFontOfSize:13])
+    .titleColor([UIColor redColor],UIControlStateNormal)
+    .controlMaker()
+    .addTarget(self,@selector(clickButton:),UIControlEventTouchUpInside)
+    .viewMaker()
+    .frame(CGRectMake(50, 300, 80, 40))
+    .addToSuperView(self.view);
     
 }
 
