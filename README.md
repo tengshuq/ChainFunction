@@ -1,6 +1,8 @@
 # ChainFunction
 iOS基础控件链式编程
 
+![效果图](https://github.com/tengshuq/ChainFunction/blob/master/demo.gif)
+
 常用的控件实现链式编程的一个小框架。。
 一般我们创建的代码的方式
 ```
